@@ -11,7 +11,7 @@
      1. 下载一键配置文件，开启命令窗口下载配置到本地：
 
         ```
-        curl https://raw.githubusercontent.com/chen7011/rules-template/refs/heads/main/clash.yaml > clash.yaml
+        curl https://raw.githubusercontent.com/chen7011/rules-template/refs/heads/main/clash.yaml > config.yaml
         ```
 
      2. 添加机场订阅：如果有多个机场多复制几份Airport1，Airport1是机场名字可以随意取。多个机场注意不要重复
