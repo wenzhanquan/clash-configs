@@ -2,6 +2,7 @@
 # 域名关键字匹配
 DOMAIN-KEYWORD,google,♻️ 香港自动
 # 域名后缀匹配
+DOMAIN-SUFFIX,ttt.sh,🚀 默认代理
 DOMAIN-SUFFIX,google.com,♻️ 香港自动
 DOMAIN-SUFFIX,github.io,♻️ 香港自动
 DOMAIN-SUFFIX,github.com,♻️ 香港自动
@@ -66,4 +67,5 @@ DOMAIN-SUFFIX,opensubtitles.org,♻️ 香港自动
 DOMAIN-SUFFIX,www.opensubtitles.org,♻️ 香港自动
 DOMAIN-SUFFIX,api.opensubtitles.org,♻️ 香港自动
 DOMAIN-SUFFIX,assets.fanart.tv,♻️ 香港自动
+
 
