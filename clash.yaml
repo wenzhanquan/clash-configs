@@ -62,6 +62,7 @@ sniffer:
     - "+.v2ex.com"
   skip-domain:
     - "+.baidu.com"
+    - "110.253.191.12"
 
 # 入站  
 tun:
