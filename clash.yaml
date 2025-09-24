@@ -42,8 +42,8 @@ profile:
 # 为防止使用插件朋友遇到面板问题，我注释掉了此模块。
 # 跑裸核朋友自行删除注释即可
 external-controller: 0.0.0.0:9090
-#secret: ""
-external-ui: "/etc/mihomo/ui"
+secret: ""
+external-ui: "/etc/openclash/ui"
 external-ui-name: zashboard
 external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 
