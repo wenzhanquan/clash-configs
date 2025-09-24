@@ -4,12 +4,12 @@
 # 机场订阅，如果有多个，复制一份Airport1的配置，注意名字不要和Airport1重复
 proxy-providers:
   Airport1:
-    url: "机场1"
+    url: https://submit.mylac.cn:20443/api/v1/client/subscribe?token=954bcf73959f25aab9a40155903ef645
     type: http
     interval: 86400
     health-check:
       enable: true
-      url: https://submit.mylac.cn:20443/api/v1/client/subscribe?token=954bcf73959f25aab9a40155903ef645
+      url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连
 
