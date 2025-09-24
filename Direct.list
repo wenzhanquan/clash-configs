@@ -1,17 +1,18 @@
 # 直连规则。所有自定义的直连域名和IP都放这个文件里，注意#表示注释这一行，这一行配置不生效
 # 域名关键字匹配
-DOMAIN-KEYWORD,m-team,直连
-DOMAIN-KEYWORD,cspt,直连
-DOMAIN-KEYWORD,ptzone,直连
-DOMAIN-KEYWORD,pandapt,直连
-DOMAIN-KEYWORD,gtk,直连
-DOMAIN-KEYWORD,btschool,直连
+DOMAIN-KEYWORD,m-team,DIRECT
+DOMAIN-KEYWORD,cspt,DIRECT
+DOMAIN-KEYWORD,ptzone,DIRECT
+DOMAIN-KEYWORD,pandapt,DIRECT
+DOMAIN-KEYWORD,gtk,DIRECT
+DOMAIN-KEYWORD,btschool,DIRECT
 # 域名后缀匹配
-DOMAIN-SUFFIX,baidu.com,直连
-DOMAIN-SUFFIX,w15183.top,直连
-DOMAIN-SUFFIX,cspt.top,直连
-DOMAIN-SUFFIX,pandapt.net,直连
-DOMAIN-SUFFIX,static.m-team.cc,直连
-DOMAIN-SUFFIX,m-team.cc,直连
-DOMAIN-SUFFIX,m-team.io,直连
+DOMAIN-SUFFIX,baidu.com,DIRECT
+DOMAIN-SUFFIX,w15183.top,DIRECT
+DOMAIN-SUFFIX,cspt.top,DIRECT
+DOMAIN-SUFFIX,pandapt.net,DIRECT
+DOMAIN-SUFFIX,static.m-team.cc,DIRECT
+DOMAIN-SUFFIX,m-team.cc,DIRECT
+DOMAIN-SUFFIX,m-team.io,DIRECT
+
 
