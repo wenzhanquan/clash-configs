@@ -8,6 +8,15 @@ DOMAIN-SUFFIX,mgstage.com,♻️ 日本自动
 DOMAIN-SUFFIX,amazon.co.jp,♻️ 日本自动
 DOMAIN-SUFFIX,avsox.click,♻️ 日本自动
 DOMAIN-SUFFIX,javdb.com,♻️ 香港自动
+#优先处理异常域名和IP
+DOMAIN,oth.str.mdt.qq.com,🚀 默认代理
+DOMAIN,time.g.aaplimg.com,直连  # 苹果时间同步域名，直连更稳定
+DOMAIN,stunserver2024.stunprotocol.org,🚀 默认代理  # STUN服务器走代理
+IP-CIDR,103.2.57.5/32,🚀 默认代理  # 解决该IP连接被取消问题
+#强化拦截问题DNS IP
+IP-CIDR,223.5.5.5/32,REJECT
+IP-CIDR,120.53.53.53/32,REJECT
+IP-CIDR,1.12.12.21/32,REJECT
 # 域名后缀匹配
 DOMAIN-SUFFIX,ttt.sh,🚀 默认代理
 DOMAIN-SUFFIX,google.com,♻️ 香港自动
@@ -74,6 +83,7 @@ DOMAIN-SUFFIX,opensubtitles.org,♻️ 香港自动
 DOMAIN-SUFFIX,www.opensubtitles.org,♻️ 香港自动
 DOMAIN-SUFFIX,api.opensubtitles.org,♻️ 香港自动
 DOMAIN-SUFFIX,assets.fanart.tv,♻️ 香港自动
+
 
 
 
