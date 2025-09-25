@@ -164,7 +164,7 @@ proxy-groups:
 # 规则匹配（核心修改）
 rules:
   # 原有规则
-  - RULE-SET,proxylite,🚀 默认代理
+  - RULE-SET,proxylite,DIRECT  # 关键：DIRECT仅为占位，实际目标以文件内规则为准
   - RULE-SET,direct_domain,直连
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
@@ -194,7 +194,11 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-  proxylite: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/ProxyLite.list"}
+  proxylite: { 
+    <<: *class, 
+    url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/ProxyLite.list",
+    behavior: classical  # 关键：经典模式，不强制覆盖目标分组
+  }
   # 修改：更换为ghproxy镜像，解决direct_domain下载超时
   direct_domain: {<<: *class,url: "https://ghproxy.com/https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/Direct.list"}
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
