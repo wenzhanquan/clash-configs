@@ -9,10 +9,9 @@ proxy-providers:
     interval: 86400
     health-check:
       enable: true
-      # 修改1：原https://www.gstatic.com/generate_204国内直连可能不通，替换为小米国内稳定检测地址
-      url: https://connect.rom.miui.com/generate_204
+      url: https://connect.rom.miui.com/generate_204  # 国内稳定检测地址
       interval: 300
-    proxy: 直连  # 此配置可选，无实际影响，保留用户原有逻辑
+    proxy: 直连
 
 # 节点信息
 proxies:
@@ -31,27 +30,26 @@ ipv6: false
 unified-delay: true
 tcp-concurrent: true
 # interface-name: enp6s18
-log-level: warning  # 保持：避免日志冗余，仅显示警告及以上
+log-level: warning
 find-process-mode: 'off'
-global-client-fingerprint: chrome  # 保持：模拟Chrome指纹，提高兼容性
+global-client-fingerprint: chrome
 keep-alive-idle: 600
 keep-alive-interval: 15
 profile:
   store-selected: true
   store-fake-ip: true
 
-# 为防止使用插件朋友遇到面板问题，我注释掉了此模块。
-# 跑裸核朋友自行删除注释即可
+# 控制面板模块
 external-controller: 0.0.0.0:9090
 secret: ""
 external-ui: "/etc/openclash/ui"
 #external-ui-name: zashboard
 #external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 
-# 嗅探
+# 嗅探（核心修改）
 sniffer:
   enable: true
-  override-destination: true  # fake-ip模式下建议启用，确保流量正确转发
+  override-destination: true
   parse-pure-ip: true
   sniff:
     HTTP:
@@ -65,28 +63,27 @@ sniffer:
     - "+.v2ex.com"
   skip-domain:
     - "+.baidu.com"
-  skip:  # 核心：忽略日志中"may not have any sent data"的IP
+  skip:  # 新增IP段，彻底解决116.136.245.10错误
     - 116.196.129.180
     - 116.196.129.154
     - 116.196.129.172
     - 59.82.120.52
     - 59.82.23.111
     - 59.82.23.82
-    # 修改2：新增日志中出现的新异常IP，消除Sniffer错误
     - 116.136.245.10
     - 123.129.226.35
+    - 116.136.245.0/24  # 补充C段，覆盖同网段所有IP
 
 # 入站  
 tun:
   enable: true
-  # system/gvisor/mixed
-  stack: mixed  # 保持：兼顾性能和兼容性
-  dns-hijack: ["any:53", "tcp://any:53"]  # 保持：劫持所有DNS请求，避免泄漏
-  auto-route: true  # 保持：自动配置路由
-  auto-redirect: true  # 保持：自动重定向流量
-  auto-detect-interface: true  # 保持：自动检测网卡
+  stack: mixed
+  dns-hijack: ["any:53", "tcp://any:53"]
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
 
-# DNS模块（核心修改区）
+# DNS模块（核心修改）
 dns:
   enable: true
   listen: 0.0.0.0:1053
@@ -96,41 +93,46 @@ dns:
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - "+.private"  # 替代private_domain规则集的私有域名（如企业内网域名）
-    - "+.cn"       # 替代cn_domain规则集的国内域名（按需调整）
-    - "+.msftconnecttest.com"  # 保持：微软网络检测域名，需真实解析
-    - "+.msftncsi.com"         # 保持：微软网络检测域名，需真实解析
-    - "time.*.com"  # 保持：时间同步域名，需真实解析
-    - "+.market.xiaomi.com"  # 保持：小米市场，需真实解析
-    - "*.lan"  # 局域网域名，避免fake-ip解析
-    - localhost.ptlogin2.qq.com  # 腾讯登录服务，避免解析异常
-    - "*.mdt.qq.com"  # 解决oth.str.mdt.qq.com超时问题
-    - "*.qq.com"  # 腾讯系域名，减少解析冲突
-    # 删除3：fake-ip-filter仅支持域名，不能添加DNS IP（114.114.114.114等），否则会导致解析异常
-  default-nameserver:  # 系统默认DNS（直连场景使用）
-    - 114.114.114.114  # 保持：114DNS稳定
-    - 180.76.76.76     # 保持：百度DNS国内优化
-    - 223.6.6.6        # 保持：阿里云DNS备用（无历史错误）
-  proxy-server-nameserver:  # 代理场景下使用的DNS
-    - https://doh.pub/dns-query  # 稳定的公共DOH
-    - tls://dns.quad9.net:853    # 新增：Quad9的TLS DNS，全球稳定（补充完整注释）
-  nameserver:  # Clash自身解析用DNS（核心修改）
+    - "+.private"
+    - "+.cn"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "time.*.com"
+    - "+.market.xiaomi.com"
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
+    - "*.mdt.qq.com"
+    - "*.qq.com"
+    # 新增：解决time.g.aaplimg.com解析失败（苹果时间同步域名）
+    - "time.g.aaplimg.com"
+    # 新增：解决stunserver2024.stunprotocol.org解析失败（STUN服务器域名）
+    - "stunserver2024.stunprotocol.org"
+  default-nameserver:
+    - 114.114.114.114
+    - 180.76.76.76
+    - 223.6.6.6
+  proxy-server-nameserver:
+    - https://doh.pub/dns-query
+    - tls://dns.quad9.net:853
+    - https://1.1.1.1/dns-query  # 新增：Cloudflare DNS，提高境外解析成功率
+  nameserver:
     - 114.114.114.114 
     - 119.29.29.29 
-    # 删除4：移除tls://223.5.5.5:53（历史日志显示该DNS频繁被取消，避免残留调用）
     - https://doh.pub/dns-query 
     - https://dns.alidns.com/dns-query
-  fallback:  # 备用DNS（提高稳定性）
-    - https://doh.pub/dns-query  # 公共DOH服务
-    - tls://dot.pub             # 公共DOT服务
-    - https://public.dns.iij.jp/dns-query  # 新增：日本IIJ DNS，补充备用
-  fallback-filter:  # 备用DNS触发条件
+    - https://public.dns.iij.jp/dns-query  # 新增：补充备用DNS
+  fallback:
+    - https://doh.pub/dns-query
+    - tls://dot.pub
+    - https://public.dns.iij.jp/dns-query
+    - tls://dns.cloudflare.com:853  # 新增：Cloudflare TLS DNS，增强稳定性
+  fallback-filter:
     geoip: true
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/32
 
-# 出站策略（用户原有逻辑不变，仅保留注释说明）
+# 出站策略（保持不变）
 proxy-groups:
   - {name: 🚀 默认代理, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 📹 YouTube, type: select, proxies: [🚀 默认代理,🔯 美国故转, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, ♻️ 美国自动, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
@@ -159,16 +161,18 @@ proxy-groups:
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
   - {name: 🌐 全部节点, type: select, include-all: true}
 
-# 规则匹配（核心修改区）
+# 规则匹配（核心修改）
 rules:
-  # 优先1：处理oth.str.mdt.qq.com超时，指定走代理
+  # 优先处理异常域名和IP
   - DOMAIN,oth.str.mdt.qq.com,🚀 默认代理
-  # 修改5：将223.5.5.5/32从直连改为REJECT，彻底拦截有问题的DNS，避免"operation was canceled"
+  - DOMAIN,time.g.aaplimg.com,直连  # 苹果时间同步域名，直连更稳定
+  - DOMAIN,stunserver2024.stunprotocol.org,🚀 默认代理  # STUN服务器走代理
+  - IP-CIDR,103.2.57.5/32,🚀 默认代理  # 解决该IP连接被取消问题
+  # 强化拦截问题DNS IP
   - IP-CIDR,223.5.5.5/32,REJECT
-  # 优先2：拦截日志中超时的DNS IP（120.53.53.53和1.12.12.21）
   - IP-CIDR,120.53.53.53/32,REJECT
   - IP-CIDR,1.12.12.21/32,REJECT
-  # 原有规则按优先级排列（不变）
+  # 原有规则
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,direct_domain,直连
   - RULE-SET,private_ip,直连
@@ -177,7 +181,7 @@ rules:
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
-  - RULE-SET,onedrive_domain,🐟 漏网之鱼  # 修正6：OneDrive国内可能需代理，从直连改为漏网之鱼（或默认代理，按需调整）
+  - RULE-SET,onedrive_domain,🐟 漏网之鱼
   - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,apple_domain,直连
   - RULE-SET,tiktok_domain,🎵 TikTok
@@ -193,17 +197,16 @@ rules:
   - RULE-SET,cn_ip,直连
   - MATCH,🐟 漏网之鱼
 
-# 规则集（核心修改区）
+# 规则集（核心修改）
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/ProxyLite.list"}
-  # 修改7：direct_domain原URL易出现EOF错误，替换为CDN源（jsdelivr）提高稳定性
-  direct_domain: {<<: *class,url: "https://cdn.jsdelivr.net/gh/wenzhanquan/clash-configs@main/Direct.list"}
+  # 修改：更换为ghproxy镜像，解决direct_domain下载超时
+  direct_domain: {<<: *class,url: "https://ghproxy.com/https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/Direct.list"}
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
-  # 修改8：ai规则集原URL错误（github.com需改为raw.githubusercontent.com），修正后才能正常下载
   ai: {  <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
@@ -224,5 +227,4 @@ rule-providers:
   google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
   telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
-  # 修改9：apple_ip原URL错误（github.com需改为raw.githubusercontent.com），修正后避免下载失败
   apple_ip: {<<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs"}
