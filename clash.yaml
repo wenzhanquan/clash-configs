@@ -163,15 +163,6 @@ proxy-groups:
 
 # 规则匹配（核心修改）
 rules:
-  # 优先处理异常域名和IP
-  - DOMAIN,oth.str.mdt.qq.com,🚀 默认代理
-  - DOMAIN,time.g.aaplimg.com,直连  # 苹果时间同步域名，直连更稳定
-  - DOMAIN,stunserver2024.stunprotocol.org,🚀 默认代理  # STUN服务器走代理
-  - IP-CIDR,103.2.57.5/32,🚀 默认代理  # 解决该IP连接被取消问题
-  # 强化拦截问题DNS IP
-  - IP-CIDR,223.5.5.5/32,REJECT
-  - IP-CIDR,120.53.53.53/32,REJECT
-  - IP-CIDR,1.12.12.21/32,REJECT
   # 原有规则
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,direct_domain,直连
