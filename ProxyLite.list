@@ -1,6 +1,13 @@
 # 代理规则，所有自定义的代理域名和IP都放这个文件里，注意#表示注释这一行
 # 域名关键字匹配
-DOMAIN-KEYWORD,google,♻️ 香港自动
+#DOMAIN-KEYWORD,google,♻️ 香港自动
+# 自己的规则
+DOMAIN-SUFFIX,jable.tv,♻️ 狮城自动
+DOMAIN-SUFFIX,dmm.co.jp,♻️ 日本自动
+DOMAIN-SUFFIX,mgstage.com,♻️ 日本自动
+DOMAIN-SUFFIX,amazon.co.jp,♻️ 日本自动
+DOMAIN-SUFFIX,avsox.click,♻️ 日本自动
+DOMAIN-SUFFIX,javdb.com,♻️ 香港自动
 # 域名后缀匹配
 DOMAIN-SUFFIX,ttt.sh,🚀 默认代理
 DOMAIN-SUFFIX,google.com,♻️ 香港自动
@@ -67,5 +74,6 @@ DOMAIN-SUFFIX,opensubtitles.org,♻️ 香港自动
 DOMAIN-SUFFIX,www.opensubtitles.org,♻️ 香港自动
 DOMAIN-SUFFIX,api.opensubtitles.org,♻️ 香港自动
 DOMAIN-SUFFIX,assets.fanart.tv,♻️ 香港自动
+
 
 
