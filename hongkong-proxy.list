@@ -1,0 +1,77 @@
+# 代理规则，所有自定义的代理域名和IP都放这个文件里，注意#表示注释这一行
+# 域名关键字匹配
+DOMAIN-KEYWORD,google
+# 域名后缀匹配
+DOMAIN-SUFFIX,ttt.sh
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,github.blog
+DOMAIN-SUFFIX,github.community
+DOMAIN-SUFFIX,api.github.com
+DOMAIN-SUFFIX,api.githubcopilot.com
+DOMAIN-SUFFIX,gist.github.com
+DOMAIN-SUFFIX,codeload.github.com
+DOMAIN-SUFFIX,central.github.com
+DOMAIN-SUFFIX,collector.github.com
+DOMAIN-SUFFIX,raw.github.com
+DOMAIN-SUFFIX,docs.github.com
+DOMAIN-SUFFIX,raw.githubusercontent.com
+DOMAIN-SUFFIX,camo.githubusercontent.com
+DOMAIN-SUFFIX,cloud.githubusercontent.com
+DOMAIN-SUFFIX,media.githubusercontent.com
+DOMAIN-SUFFIX,desktop.githubusercontent.com
+DOMAIN-SUFFIX,objects.githubusercontent.com
+DOMAIN-SUFFIX,favicons.githubusercontent.com
+DOMAIN-SUFFIX,avatars5.githubusercontent.com
+DOMAIN-SUFFIX,avatars4.githubusercontent.com
+DOMAIN-SUFFIX,avatars3.githubusercontent.com
+DOMAIN-SUFFIX,avatars2.githubusercontent.com
+DOMAIN-SUFFIX,avatars1.githubusercontent.com
+DOMAIN-SUFFIX,avatars0.githubusercontent.com
+DOMAIN-SUFFIX,avatars.githubusercontent.com
+DOMAIN-SUFFIX,user-images.githubusercontent.com
+DOMAIN-SUFFIX,copilot-proxy.githubusercontent.com
+DOMAIN-SUFFIX,github-releases.githubusercontent.com
+DOMAIN-SUFFIX,pipelines.actions.githubusercontent.com
+DOMAIN-SUFFIX,pipelinesghubeus7.actions.githubusercontent.com
+DOMAIN-SUFFIX,githubstatus.com
+DOMAIN-SUFFIX,collector.githubapp.com
+DOMAIN-SUFFIX,github.githubassets.com
+DOMAIN-SUFFIX,analytics.githubassets.com
+DOMAIN-SUFFIX,github.map.fastly.net
+DOMAIN-SUFFIX,github.global.ssl.fastly.net
+DOMAIN-SUFFIX,github-cloud.s3.amazonaws.com
+DOMAIN-SUFFIX,github-com.s3.amazonaws.com
+DOMAIN-SUFFIX,github-production-release-asset-2e65be.s3.amazonaws.com
+DOMAIN-SUFFIX,github-production-user-asset-6210df.s3.amazonaws.com
+DOMAIN-SUFFIX,github-production-repository-file-5c1aeb.s3.amazonaws.com
+#GitHub Hosts End
+#Docker Hosts Start
+DOMAIN-SUFFIX,registry.hub.docker.com
+DOMAIN-SUFFIX,hub.docker.com
+DOMAIN-SUFFIX,index.docker.io
+DOMAIN-SUFFIX,ghcr.io
+DOMAIN-SUFFIX,gcr.io
+DOMAIN-SUFFIX,k8s.gcr.io
+DOMAIN-SUFFIX,quay.io
+#Docker Hosts End
+#TMDB Hosts Start
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,www.themoviedb.org
+DOMAIN-SUFFIX,api.themoviedb.org
+DOMAIN-SUFFIX,tmdb.org
+DOMAIN-SUFFIX,api.tmdb.org
+DOMAIN-SUFFIX,image.tmdb.org
+DOMAIN-SUFFIX,opensubtitles.org
+DOMAIN-SUFFIX,www.opensubtitles.org
+DOMAIN-SUFFIX,api.opensubtitles.org
+DOMAIN-SUFFIX,assets.fanart.tv
+
+
+
+
+
+
+
+
