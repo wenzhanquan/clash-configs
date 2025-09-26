@@ -137,7 +137,7 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - RULE-SET,proxylite,🚀 默认代理
+  - RULE-SET,proxylite,♻️ 香港自动
   - RULE-SET,direct_domain,直连
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
@@ -168,7 +168,11 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-  proxylite: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/ProxyLite.list"}
+  hongkong-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/hongkong-proxy.list"}
+  japan-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/japan-proxy.list"}
+  shicheng-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/shicheng-proxy.list"}
+  meiguo-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/meiguo-proxy.list"}
+  auto-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/ProxyLite.list"}
   direct_domain: {<<: *class,url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/Direct.list"}
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
