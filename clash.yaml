@@ -137,7 +137,10 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - RULE-SET,proxylite,♻️ 香港自动
+  - RULE-SET,hongkong-proxy,♻️ 香港自动
+  - RULE-SET,shicheng-proxy,♻️ 狮城自动
+  - RULE-SET,japan-proxy,♻️ 日本自动
+  - RULE-SET,meiguo-proxy,♻️ 美国自动
   - RULE-SET,direct_domain,直连
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
