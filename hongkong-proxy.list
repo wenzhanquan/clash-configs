@@ -1,7 +1,6 @@
 # 代理规则，所有自定义的代理域名和IP都放这个文件里，注意#表示注释这一行
 # 域名关键字匹配
 DOMAIN-KEYWORD,google
-DOMAIN-KEYWORD,telegram
 DOMAIN-SUFFIX,javdb.com
 # 域名后缀匹配
 DOMAIN-SUFFIX,ttt.sh
@@ -69,6 +68,7 @@ DOMAIN-SUFFIX,opensubtitles.org
 DOMAIN-SUFFIX,www.opensubtitles.org
 DOMAIN-SUFFIX,api.opensubtitles.org
 DOMAIN-SUFFIX,assets.fanart.tv
+
 
 
 
