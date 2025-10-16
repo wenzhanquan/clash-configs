@@ -2,6 +2,7 @@
 # 域名关键字匹配
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,javdb.com
+DOMAIN-KEYWORD,ptzone
 # 域名后缀匹配
 DOMAIN-SUFFIX,ttt.sh
 DOMAIN-SUFFIX,google.com
@@ -68,6 +69,7 @@ DOMAIN-SUFFIX,opensubtitles.org
 DOMAIN-SUFFIX,www.opensubtitles.org
 DOMAIN-SUFFIX,api.opensubtitles.org
 DOMAIN-SUFFIX,assets.fanart.tv
+
 
 
 
