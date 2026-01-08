@@ -3,7 +3,17 @@
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,javdb.com
 DOMAIN-KEYWORD,ptzone
+DOMAIN-KEYWORD,sehuatang
+DOMAIN-KEYWORD,98tang
+
 # 域名后缀匹配
+DOMAIN-SUFFIX,sehuatang.org
+DOMAIN-SUFFIX,sehuatang.net
+DOMAIN-SUFFIX,sehuatang.com
+DOMAIN-SUFFIX,98tang.com
+DOMAIN-SUFFIX,98sehua.com
+DOMAIN-SUFFIX,98sq.org
+DOMAIN-SUFFIX,98tang.net
 DOMAIN-SUFFIX,ttt.sh
 DOMAIN-SUFFIX,google.com
 DOMAIN-SUFFIX,github.io
@@ -69,6 +79,7 @@ DOMAIN-SUFFIX,opensubtitles.org
 DOMAIN-SUFFIX,www.opensubtitles.org
 DOMAIN-SUFFIX,api.opensubtitles.org
 DOMAIN-SUFFIX,assets.fanart.tv
+
 
 
 
