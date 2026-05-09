@@ -13,4 +13,9 @@ DOMAIN-SUFFIX,pandapt.net
 DOMAIN-SUFFIX,static.m-team.cc
 DOMAIN-SUFFIX,m-team.cc
 DOMAIN-SUFFIX,m-team.io
-
+# --- 补充 MoviePilot 国内服务直连 ---
+# 豆瓣 API（防止刮削时频繁跳验证码被封）
+DOMAIN-SUFFIX,douban.com
+# 腾讯企业微信 API（极度重要，保证本机真实 IP 访问，防止串台报错）
+DOMAIN-SUFFIX,weixin.qq.com
+DOMAIN-SUFFIX,qyapi.weixin.qq.com
