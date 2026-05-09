@@ -137,6 +137,22 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
+  # --- 【硬编码核心域名，打破鸡生蛋循环并防止微信误杀】 ---
+  - DOMAIN-SUFFIX,weixin.qq.com,直连
+  - DOMAIN-SUFFIX,qyapi.weixin.qq.com,直连
+  - DOMAIN-SUFFIX,douban.com,直连
+  - DOMAIN-SUFFIX,github.com,🔯 香港故转
+  - DOMAIN-SUFFIX,githubusercontent.com,🔯 香港故转
+  - DOMAIN-SUFFIX,githubassets.com,🔯 香港故转
+  - DOMAIN-SUFFIX,themoviedb.org,🔯 香港故转
+  - DOMAIN-SUFFIX,tmdb.org,🔯 香港故转
+  - DOMAIN-SUFFIX,thetvdb.com,🔯 香港故转
+  - DOMAIN-SUFFIX,fanart.tv,🔯 香港故转
+  - DOMAIN-SUFFIX,telegram.org,🔯 香港故转
+  - DOMAIN-SUFFIX,pypi.org,🔯 香港故转
+  - DOMAIN-SUFFIX,slack.com,🔯 香港故转
+
+  # --- 【以下为原有规则保持不动】 ---
   - RULE-SET,hongkong-proxy,🔯 香港故转
   - RULE-SET,shicheng-proxy,♻️ 狮城自动
   - RULE-SET,japan-proxy,♻️ 日本自动
@@ -171,30 +187,30 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-  hongkong-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/hongkong-proxy.list"}
-  japan-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/japan-proxy.list"}
-  shicheng-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/shicheng-proxy.list"}
-  meiguo-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/meiguo-proxy.list"}
-  auto-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/hongkong-proxy.list"}
-  direct_domain: {<<: *class,url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/Direct.list"}
-  private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
-  ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
-  youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
-  google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
-  github_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
-  telegram_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
-  netflix_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
-  paypal_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
-  onedrive_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"}
-  microsoft_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"}
-  apple_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs"}
-  speedtest_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs"}
-  tiktok_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
-  geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
-  cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
-  private_ip: {<<: *ip, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/private.mrs"}
-  cn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"}
-  google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
-  telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
-  netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
-  apple_ip: {<<: *ip, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/apple.mrs"}
+  hongkong-proxy: { <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/hongkong-proxy.list"}
+  japan-proxy: { <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/japan-proxy.list"}
+  shicheng-proxy: { <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/shicheng-proxy.list"}
+  meiguo-proxy: { <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/meiguo-proxy.list"}
+  auto-proxy: { <<: *class, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/hongkong-proxy.list"}
+  direct_domain: {<<: *class,url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/wenzhanquan/clash-configs/refs/heads/main/Direct.list"}
+  private_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
+  ai: {  <<: *domain, url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
+  youtube_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
+  google_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
+  github_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
+  telegram_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
+  netflix_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
+  paypal_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
+  onedrive_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"}
+  microsoft_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"}
+  apple_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs"}
+  speedtest_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs"}
+  tiktok_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
+  geolocation-!cn: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
+  cn_domain: { <<: *domain, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
+  private_ip: {<<: *ip, url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/private.mrs"}
+  cn_ip: { <<: *ip, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"}
+  google_ip: { <<: *ip, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
+  telegram_ip: { <<: *ip, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
+  netflix_ip: { <<: *ip, url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
+  apple_ip: {<<: *ip, url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/apple.mrs"}
