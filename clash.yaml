@@ -138,11 +138,11 @@ rules:
   - DOMAIN-SUFFIX,weixin.qq.com,直连
   - DOMAIN-SUFFIX,qyapi.weixin.qq.com,直连
   - DOMAIN-SUFFIX,douban.com,直连
-  - DOMAIN-SUFFIX,github.com,♻️ 香港自动
-  - DOMAIN-SUFFIX,githubusercontent.com,♻️ 香港自动
-  - DOMAIN-SUFFIX,githubassets.com,♻️ 香港自动
-  - DOMAIN-SUFFIX,ghcr.io,♻️ 香港自动
-  - DOMAIN-SUFFIX,hub.docker.com,♻️ 香港自动
+  - DOMAIN-SUFFIX,github.com,🔯 香港故转
+  - DOMAIN-SUFFIX,githubusercontent.com,🔯 香港故转
+  - DOMAIN-SUFFIX,githubassets.com,🔯 香港故转
+  - DOMAIN-SUFFIX,ghcr.io,🔯 香港故转
+  - DOMAIN-SUFFIX,hub.docker.com,🔯 香港故转
   - DOMAIN-SUFFIX,themoviedb.org,🔯 香港故转
   - DOMAIN-SUFFIX,tmdb.org,🔯 香港故转
   - DOMAIN-SUFFIX,thetvdb.com,🔯 香港故转
