@@ -136,6 +136,14 @@ proxy-groups:
 
 # 规则匹配
 rules:
+  # --- AI 专属最高优先级规则开始 ---
+  - DOMAIN-SUFFIX,gemini.google.com,🔯 美国故转
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com,🔯 美国故转
+  - DOMAIN-SUFFIX,ai.google.dev,🔯 美国故转
+  - DOMAIN-SUFFIX,aistudio.google.com,🔯 美国故转
+  - DOMAIN-SUFFIX,bard.google.com,🔯 美国故转
+  - DOMAIN-KEYWORD,gemini,🔯 美国故转
+  # --- AI 专属最高优先级规则结束 ---
   - RULE-SET,moviepilot-proxy,🎬 MoviePilot
   - RULE-SET,hongkong-proxy,♻️ 香港自动
   - RULE-SET,shicheng-proxy,♻️ 狮城自动
