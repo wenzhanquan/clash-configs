@@ -150,6 +150,8 @@ rules:
   - DOMAIN-SUFFIX,telegram.org,🔯 香港故转
   - DOMAIN-SUFFIX,pypi.org,🔯 香港故转
   - DOMAIN-SUFFIX,slack.com,🔯 香港故转
+  - DOMAIN-SUFFIX,movie-pilot.org,🔯 香港故转
+  - DOMAIN-SUFFIX,pgl.yoyo.org,🔯 香港故转
 
   # --- 【规则集匹配】 ---
   - RULE-SET,hongkong-proxy,🔯 香港故转
