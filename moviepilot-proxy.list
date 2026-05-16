@@ -1,1 +1,15 @@
-
+# MoviePilot 核心依赖组件
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,ghcr.io
+DOMAIN-SUFFIX,hub.docker.com
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,tmdb.org
+DOMAIN-SUFFIX,thetvdb.com
+DOMAIN-SUFFIX,fanart.tv
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,pypi.org
+DOMAIN-SUFFIX,slack.com
+DOMAIN-SUFFIX,movie-pilot.org
+DOMAIN-SUFFIX,pgl.yoyo.org
