@@ -1,6 +1,5 @@
 # 代理规则，所有自定义的代理域名和IP都放这个文件里
 # 域名关键字匹配
-DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,javdb.com
 DOMAIN-KEYWORD,ptzone
 DOMAIN-KEYWORD,sehuatang
