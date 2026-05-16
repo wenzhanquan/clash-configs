@@ -4,6 +4,9 @@ DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,ghcr.io
 DOMAIN-SUFFIX,hub.docker.com
+DOMAIN-SUFFIX,docker.io          # 刚补充的 Docker 核心 API
+DOMAIN-SUFFIX,docker.com         # 刚补充的 Docker 核心 API
+DOMAIN-SUFFIX,cloudflarestorage.com # 刚补充的 Docker 镜像实体下载节点
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,thetvdb.com
