@@ -138,7 +138,7 @@ rules:
   - RULE-SET,moviepilot-proxy,🎬 MoviePilot
   - RULE-SET,hongkong-proxy,🔯 香港故转
   - RULE-SET,shicheng-proxy,♻️ 狮城自动
-  - RULE-SET,japan-proxy,♻️ 日本自动
+  - RULE-SET,japan-proxy,🔯 日本故转
   - RULE-SET,meiguo-proxy,♻️ 美国自动
   - RULE-SET,direct_domain,直连
   - RULE-SET,private_ip,直连
