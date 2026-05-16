@@ -135,12 +135,7 @@ proxy-groups:
 
 # 规则匹配
 rules:
-  # --- 【核心修正：将 GitHub 和 Docker 分配给默认代理】 ---
-  - DOMAIN-SUFFIX,weixin.qq.com,直连
-  - DOMAIN-SUFFIX,qyapi.weixin.qq.com,直连
-  - DOMAIN-SUFFIX,douban.com,直连
-  
-  # --- 【规则集匹配】 ---
+  - RULE-SET,moviepilot-proxy,🎬 MoviePilot
   - RULE-SET,hongkong-proxy,🔯 香港故转
   - RULE-SET,shicheng-proxy,♻️ 狮城自动
   - RULE-SET,japan-proxy,♻️ 日本自动
