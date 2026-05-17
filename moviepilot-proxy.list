@@ -1,4 +1,4 @@
-# MoviePilot 核心依赖组件
+# MoviePilot 核心依赖组件 (保留原有规则)
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
@@ -16,3 +16,19 @@ DOMAIN-SUFFIX,pypi.org
 DOMAIN-SUFFIX,slack.com
 DOMAIN-SUFFIX,movie-pilot.org
 DOMAIN-SUFFIX,pgl.yoyo.org
+
+# --- 以下为新增补充的核心刮削与字幕依赖域名 ---
+
+# 1. 影视刮削备用接口与补充数据源
+DOMAIN-SUFFIX,tmdb.biz
+DOMAIN-SUFFIX,imdb.com
+DOMAIN-SUFFIX,trakt.tv
+DOMAIN-SUFFIX,tvmaze.com
+
+# 2. 动漫元数据刮削 (二次元/番剧必备)
+DOMAIN-SUFFIX,bangumi.tv
+DOMAIN-SUFFIX,bgm.tv
+
+# 3. 常见外挂字幕插件接口 (解决下不到字幕的问题)
+DOMAIN-SUFFIX,opensubtitles.org
+DOMAIN-SUFFIX,opensubtitles.com
