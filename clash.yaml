@@ -4,7 +4,7 @@
 # 机场订阅，如果有多个，复制一份Airport1的配置，注意名字不要和Airport1重复
 proxy-providers:
   Airport1:
-    url: "https://c0d97821eafa5.nydy.cc/sleep/954bcf73959f25aab9a40155903ef645"
+    url: "https://203.86.236.16/sleep/d251277b058fd15c64ec56fdbcb02def"
     type: http
     interval: 86400
     health-check:
