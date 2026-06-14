@@ -12,7 +12,15 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连
-
+  Airport2:
+    url: "https://dash.xn--cp3a08l.com/api/v1/pq/b3c4d71aa55f8b2d9f856b80b8d7c38c"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 直连
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
