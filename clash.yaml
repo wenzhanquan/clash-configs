@@ -193,12 +193,12 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-  hongkong-proxy: { <<: *class, url: "https://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@raw.githubusercontent.com/wenzhanquan/clash-configs/main/hongkong-proxy.list"}
-  japan-proxy: { <<: *class, url: "https://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@raw.githubusercontent.com/wenzhanquan/clash-configs/main/japan-proxy.list"}
-  shicheng-proxy: { <<: *class, url: "https://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@raw.githubusercontent.com/wenzhanquan/clash-configs/main/shicheng-proxy.list"}
-  meiguo-proxy: { <<: *class, url: "https://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@raw.githubusercontent.com/wenzhanquan/clash-configs/main/meiguo-proxy.list"}
-  auto-proxy: { <<: *class, url: "https://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@raw.githubusercontent.com/wenzhanquan/clash-configs/main/hongkong-proxy.list"}
-  direct_domain: { <<: *class, url: "https://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@raw.githubusercontent.com/wenzhanquan/clash-configs/main/Direct.list"}
+  hongkong-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/hongkong-proxy.list"}
+  japan-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/japan-proxy.list"}
+  shicheng-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/shicheng-proxy.list"}
+  meiguo-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/meiguo-proxy.list"}
+  auto-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/hongkong-proxy.list"}
+  direct_domain: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/Direct.list"}
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
@@ -220,5 +220,5 @@ rule-providers:
   telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
   apple_ip: {<<: *ip, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/apple.mrs"}
-  moviepilot-proxy: { <<: *class, url: "https://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@raw.githubusercontent.com/wenzhanquan/clash-configs/main/moviepilot-proxy.list"}
-  google-ai: { <<: *class, url: "https://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@raw.githubusercontent.com/wenzhanquan/clash-configs/main/google-ai.list"}
+  moviepilot-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/moviepilot-proxy.list"}
+  google-ai: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/google-ai.list"}
