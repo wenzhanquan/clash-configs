@@ -7,6 +7,8 @@ proxy-providers:
     url: "https://203.86.236.16/sleep/d251277b058fd15c64ec56fdbcb02def"
     type: http
     interval: 86400
+    override:
+      additional-prefix: "【奈云】"
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -16,6 +18,8 @@ proxy-providers:
     url: "https://dash.xn--cp3a08l.com/api/v1/pq/b3c4d71aa55f8b2d9f856b80b8d7c38c"
     type: http
     interval: 86400
+    override:
+      additional-prefix: "【赔钱】"
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
