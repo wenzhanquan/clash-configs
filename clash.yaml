@@ -4,7 +4,7 @@
 # 机场订阅，如果有多个，复制一份Airport1的配置，注意名字不要和Airport1重复
 proxy-providers:
   Airport1:
-    url: "https://203.86.236.16/sleep/d251277b058fd15c64ec56fdbcb02def"
+    url: "Airport1"
     type: http
     interval: 86400
     override:
@@ -15,7 +15,7 @@ proxy-providers:
       interval: 300
     proxy: 直连
   Airport2:
-    url: "https://dash.xn--cp3a08l.com/api/v1/pq/b3c4d71aa55f8b2d9f856b80b8d7c38c"
+    url: "Airport2"
     type: http
     interval: 86400
     override:
