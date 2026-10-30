@@ -128,6 +128,8 @@ proxy-groups:
   - {name: 📲 Telegram, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 台湾故转, 🔯 韩国故转, 🔯 加拿大故转, 🔯 马来故转, 🔯 英国故转, 🔯 法国故转, 🔯 德国故转, 🔯 土耳其故转, 🔯 泰国故转, 🔯 其他故转, ♻️ 自动选择, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 台湾自动, ♻️ 韩国自动, ♻️ 加拿大自动, ♻️ 马来自动, ♻️ 英国自动, ♻️ 法国自动, ♻️ 德国自动, ♻️ 土耳其自动, ♻️ 泰国自动, ♻️ 其他自动, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🇨🇦 加拿大节点, 🇲🇾 马来节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇹🇷 土耳其节点, 🇹🇭 泰国节点, 🌍 其他地区, 🌐 全部节点, 直连]}
   - {name: 🎥 NETFLIX, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 台湾故转, 🔯 韩国故转, 🔯 加拿大故转, 🔯 马来故转, 🔯 英国故转, 🔯 法国故转, 🔯 德国故转, 🔯 土耳其故转, 🔯 泰国故转, 🔯 其他故转, ♻️ 自动选择, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 台湾自动, ♻️ 韩国自动, ♻️ 加拿大自动, ♻️ 马来自动, ♻️ 英国自动, ♻️ 法国自动, ♻️ 德国自动, ♻️ 土耳其自动, ♻️ 泰国自动, ♻️ 其他自动, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🇨🇦 加拿大节点, 🇲🇾 马来节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇹🇷 土耳其节点, 🇹🇭 泰国节点, 🌍 其他地区, 🌐 全部节点, 直连]}
   - {name: 💶 PayPal, type: select, hidden: true, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 台湾故转, 🔯 韩国故转, 🔯 加拿大故转, 🔯 马来故转, 🔯 英国故转, 🔯 法国故转, 🔯 德国故转, 🔯 土耳其故转, 🔯 泰国故转, 🔯 其他故转, ♻️ 自动选择, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 台湾自动, ♻️ 韩国自动, ♻️ 加拿大自动, ♻️ 马来自动, ♻️ 英国自动, ♻️ 法国自动, ♻️ 德国自动, ♻️ 土耳其自动, ♻️ 泰国自动, ♻️ 其他自动, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🇨🇦 加拿大节点, 🇲🇾 马来节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇹🇷 土耳其节点, 🇹🇭 泰国节点, 🌍 其他地区, 🌐 全部节点, 直连]}
+  - {name: 🍑 成人内容 (日本优先), type: select, proxies: [🇯🇵 日本节点, 🔯 日本故转, ♻️ 日本自动, 🚀 默认代理, 🌐 全部节点]}
+  - {name: 🚫 成人内容 (屏蔽日本), type: select, proxies: [🇭🇰 香港节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🔯 香港故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [直连, 🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 台湾故转, 🔯 韩国故转, 🔯 加拿大故转, 🔯 马来故转, 🔯 英国故转, 🔯 法国故转, 🔯 德国故转, 🔯 土耳其故转, 🔯 泰国故转, 🔯 其他故转, ♻️ 自动选择, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 台湾自动, ♻️ 韩国自动, ♻️ 加拿大自动, ♻️ 马来自动, ♻️ 英国自动, ♻️ 法国自动, ♻️ 德国自动, ♻️ 土耳其自动, ♻️ 泰国自动, ♻️ 其他自动, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🇨🇦 加拿大节点, 🇲🇾 马来节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇹🇷 土耳其节点, 🇹🇭 泰国节点, 🌍 其他地区, 🌐 全部节点]}
   
   # --- 2. 地区节点分组 ---
@@ -148,7 +150,7 @@ proxy-groups:
   
   # --- 3. 故转（故障转移）系列分组 ---
   - {name: 🔯 Google-AI故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(美|US|(?i)States|America|日|JP|(?i)Japan))^((?!(港|台|韩|新)).)*$"}
-  - {name: 🔯 香港故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|加|马|英|法|德|土|泰)).)*$"}
+  - {name: 🔯 香港故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美|加|马|英|法|德|土|泰)).)*$"}
   - {name: 🔯 日本故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美|加|马|英|法|德|土|泰)).)*$" }
   - {name: 🔯 狮城故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?i)新加坡|坡|狮城|SG|Singapore" }
   - {name: 🔯 美国故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新|加|马|英|法|德|土|泰)).)*$" }
@@ -165,7 +167,7 @@ proxy-groups:
   
   # --- 4. 自动测速系列分组 ---
   - {name: ♻️ 自动选择, type: url-test, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "^((?!(直连)).)*$"}
-  - {name: ♻️ 香港自动, type: url-test, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美|加|马|英|法|德|土|泰)).)*$"}
+  - {name: ♻️ 香港自动, type: url-test, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美|加|马|英|法|德|土|泰)).)*$"}
   - {name: ♻️ 日本自动, type: url-test, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美|加|马|英|法|德|土|泰)).)*$" }
   - {name: ♻️ 狮城自动, type: url-test, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?i)新加坡|坡|狮城|SG|Singapore" }
   - {name: ♻️ 美国自动, type: url-test, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新|加|马|英|法|德|土|泰)).)*$"}
@@ -185,6 +187,17 @@ proxy-groups:
 
 # 规则匹配
 rules:
+  # 成人内容专属路由规则 (放在前面优先匹配)
+  - DOMAIN-SUFFIX,javdb.com,🍑 成人内容 (日本优先)
+  - DOMAIN-SUFFIX,javbus.com,🍑 成人内容 (日本优先)
+  - DOMAIN-SUFFIX,javlibrary.com,🍑 成人内容 (日本优先)
+  - DOMAIN-KEYWORD,dmm,🍑 成人内容 (日本优先)
+  - DOMAIN-KEYWORD,fc2,🍑 成人内容 (日本优先)
+  - DOMAIN-SUFFIX,missav123.com,🚫 成人内容 (屏蔽日本)
+  - DOMAIN-SUFFIX,avmoo.website,🚫 成人内容 (屏蔽日本)
+  - DOMAIN-SUFFIX,stripchat.cam,🚫 成人内容 (屏蔽日本)
+
+  # 基础应用分流
   - RULE-SET,google-ai,🔯 Google-AI故转
   - RULE-SET,moviepilot-proxy,🎬 MoviePilot
   - RULE-SET,hongkong-proxy,♻️ 香港自动
@@ -205,10 +218,14 @@ rules:
   - RULE-SET,telegram_domain,📲 Telegram
   - RULE-SET,netflix_domain,🎥 NETFLIX
   - RULE-SET,paypal_domain,💶 PayPal
+  
+  # IP 规则防泄漏
   - RULE-SET,apple_ip,直连,no-resolve
   - RULE-SET,google_ip,🍀 Google,no-resolve
   - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
   - RULE-SET,telegram_ip,📲 Telegram,no-resolve
+  
+  # 全局地理位置兜底分流
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,直连
   - RULE-SET,cn_ip,直连
