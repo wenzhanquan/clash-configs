@@ -188,6 +188,7 @@ proxy-groups:
 # 规则匹配
 rules:
   # 成人内容专属路由规则 (放在前面优先匹配)
+  - DOMAIN-SUFFIX,avbase.net,🍑 成人内容 (日本优先)
   - DOMAIN-SUFFIX,javdb.com,🍑 成人内容 (日本优先)
   - DOMAIN-SUFFIX,javbus.com,🍑 成人内容 (日本优先)
   - DOMAIN-SUFFIX,javlibrary.com,🍑 成人内容 (日本优先)
