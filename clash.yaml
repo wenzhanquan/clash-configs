@@ -188,15 +188,8 @@ proxy-groups:
 # 规则匹配
 rules:
   # 成人内容专属路由规则 (放在前面优先匹配)
-  - DOMAIN-SUFFIX,avbase.net,🍑 成人内容 (日本优先)
-  - DOMAIN-SUFFIX,javdb.com,🍑 成人内容 (日本优先)
-  - DOMAIN-SUFFIX,javbus.com,🍑 成人内容 (日本优先)
-  - DOMAIN-SUFFIX,javlibrary.com,🍑 成人内容 (日本优先)
-  - DOMAIN-KEYWORD,dmm,🍑 成人内容 (日本优先)
-  - DOMAIN-KEYWORD,fc2,🍑 成人内容 (日本优先)
-  - DOMAIN-SUFFIX,missav123.com,🚫 成人内容 (屏蔽日本)
-  - DOMAIN-SUFFIX,avmoo.website,🚫 成人内容 (屏蔽日本)
-  - DOMAIN-SUFFIX,stripchat.cam,🚫 成人内容 (屏蔽日本)
+  - RULE-SET,adult-sites,🍑 成人内容 (日本优先)
+  - RULE-SET,adult-no-japan,🚫 成人内容 (屏蔽日本)
 
   # 基础应用分流
   - RULE-SET,google-ai,🔯 Google-AI故转
@@ -238,6 +231,8 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
+  adult-sites: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/adult-sites.list"}
+  adult-no-japan: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/adult-no-japan.list"}
   hongkong-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/hongkong-proxy.list"}
   japan-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/japan-proxy.list"}
   shicheng-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/shicheng-proxy.list"}
