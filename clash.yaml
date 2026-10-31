@@ -112,6 +112,8 @@ dns:
  
 # 出站策略
 proxy-groups:
+  - {name: 📰 Immortal, type: select, proxies: [♻️ 香港自动, 🔯 香港故转, 🇭🇰 香港节点, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点]}
+  - {name: 📰 Immortal-日本优先, type: select, proxies: [♻️ 日本自动, 🔯 日本故转, 🇯🇵 日本节点, 🚀 默认代理, 🌐 全部节点]}
   # --- 1. 业务应用分组 ---
   - {name: 🚀 默认代理, type: select, proxies: [♻️ 自动选择, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 台湾故转, 🔯 韩国故转, 🔯 加拿大故转, 🔯 马来故转, 🔯 英国故转, 🔯 法国故转, 🔯 德国故转, 🔯 土耳其故转, 🔯 泰国故转, 🔯 其他故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 台湾自动, ♻️ 韩国自动, ♻️ 加拿大自动, ♻️ 马来自动, ♻️ 英国自动, ♻️ 法国自动, ♻️ 德国自动, ♻️ 土耳其自动, ♻️ 泰国自动, ♻️ 其他自动, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🇨🇦 加拿大节点, 🇲🇾 马来节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇹🇷 土耳其节点, 🇹🇭 泰国节点, 🌍 其他地区, 🌐 全部节点, 直连]}
   - {name: 🎬 MoviePilot, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 台湾故转, 🔯 韩国故转, 🔯 加拿大故转, 🔯 马来故转, 🔯 英国故转, 🔯 法国故转, 🔯 德国故转, 🔯 土耳其故转, 🔯 泰国故转, 🔯 其他故转, ♻️ 自动选择, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 台湾自动, ♻️ 韩国自动, ♻️ 加拿大自动, ♻️ 马来自动, ♻️ 英国自动, ♻️ 法国自动, ♻️ 德国自动, ♻️ 土耳其自动, ♻️ 泰国自动, ♻️ 其他自动, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇹🇼 台湾节点, 🇰🇷 韩国节点, 🇨🇦 加拿大节点, 🇲🇾 马来节点, 🇬🇧 英国节点, 🇫🇷 法国节点, 🇩🇪 德国节点, 🇹🇷 土耳其节点, 🇹🇭 泰国节点, 🌍 其他地区, 🌐 全部节点, 直连]}
@@ -184,6 +186,9 @@ proxy-groups:
 
 # 规则匹配
 rules:
+  # Immortal 项目规则；日本优先站点保留独立策略
+  - RULE-SET,immortal-japan,📰 Immortal-日本优先
+  - RULE-SET,immortal-proxy,📰 Immortal
   # 成人内容专属路由规则 (放在前面优先匹配)
   - RULE-SET,adult-sites,🍑 成人内容 (日本优先)
   - RULE-SET,adult-no-japan,🚫 成人内容 (屏蔽日本)
@@ -227,6 +232,8 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
+  immortal-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/immortal-proxy.list"}
+  immortal-japan: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/immortal-japan.list"}
   adult-sites: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/adult-sites.list"}
   adult-no-japan: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/adult-no-japan.list"}
   hongkong-proxy: { <<: *class, url: "https://raw.githubusercontent.com/wenzhanquan/clash-configs/main/hongkong-proxy.list"}

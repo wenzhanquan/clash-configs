@@ -1,19 +1,9 @@
 # 代理规则，所有自定义的代理域名和IP都放这个文件里
 # 域名关键字匹配
 DOMAIN-KEYWORD,ptzone
-DOMAIN-KEYWORD,sehuatang
-DOMAIN-KEYWORD,98tang
 
 # 域名后缀匹配
-DOMAIN-SUFFIX,sehuatang.org
-DOMAIN-SUFFIX,sehuatang.net
-DOMAIN-SUFFIX,sehuatang.com
-DOMAIN-SUFFIX,98tang.com
-DOMAIN-SUFFIX,98sehua.com
-DOMAIN-SUFFIX,98sq.org
-DOMAIN-SUFFIX,98tang.net
 DOMAIN-SUFFIX,ttt.sh
 DOMAIN-SUFFIX,mikanani.me
-DOMAIN-SUFFIX,hxmmdd.com
 
 # 影视元数据和字幕统一由 moviepilot-proxy.list 管理。

@@ -1,5 +1,18 @@
 # clash-configs
 
+## Immortal 项目分流
+
+| 规则文件 | 分组 | 默认出口 |
+| --- | --- | --- |
+| `immortal-proxy.list` | `📰 Immortal` | 香港自动 |
+| `immortal-japan.list` | `📰 Immortal-日本优先` | 日本自动 |
+
+`hxmmdd.com` 和色花堂相关资源放在普通项目规则；avbase、x1080x、JAVDB 接口、图片 CDN 和图书馆放在日本优先规则。已有“屏蔽日本”策略独立保留。
+
+这些规则按目标域名分类，不会识别请求是否来自某个 Docker 容器。GitHub、Telegram 等共享服务继续使用各自分组。
+
+从旧版本升级时，请同时更新主配置 `clash.yaml` 和规则集，再重新加载；只刷新旧配置的规则集无法创建新的 Immortal 分组。公开配置不保存机场订阅链接。
+
 - ### 项目简介
 
   - clash开箱即用配置，可直接添加机场使用，如果不熟练yaml语法可以参考： https://zh.wikipedia.org/wiki/YAML#%E8%AA%9E%E6%B3%95 
