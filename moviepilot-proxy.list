@@ -1,21 +1,10 @@
-# MoviePilot 核心依赖组件 (保留原有规则)
-DOMAIN-SUFFIX,github.com
-DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN-SUFFIX,githubassets.com
-DOMAIN-SUFFIX,ghcr.io
-DOMAIN-SUFFIX,hub.docker.com
-DOMAIN-SUFFIX,docker.io
-DOMAIN-SUFFIX,docker.com
-DOMAIN-SUFFIX,cloudflarestorage.com
+# MoviePilot 专用服务、影视元数据与字幕。
+# GitHub、Telegram 等通用服务由主配置的独立分类处理。
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,thetvdb.com
 DOMAIN-SUFFIX,fanart.tv
-DOMAIN-SUFFIX,telegram.org
-DOMAIN-SUFFIX,pypi.org
-DOMAIN-SUFFIX,slack.com
 DOMAIN-SUFFIX,movie-pilot.org
-DOMAIN-SUFFIX,pgl.yoyo.org
 
 # --- 以下为新增补充的核心刮削与字幕依赖域名 ---
 
