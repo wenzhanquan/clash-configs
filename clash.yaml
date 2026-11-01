@@ -148,8 +148,7 @@ proxy-groups:
   - {name: 🌍 其他地区, type: select, include-all: true, filter: "^((?!(港|HK|日|JP|新|坡|狮城|SG|台|TW|美|US|加|CA|马|MY|英|UK|法|FR|德|DE|韩|KR|土|TR|泰|TH|直连)).)*$"}
   
   # --- 3. 故转（故障转移）系列分组 ---
-  - {name: 🔯 Google-AI故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(美|US|(?i)States|America|(?i)Japan))^((?!(港|台|韩|新)).)*$"}
-  #- {name: 🔯 Google-AI故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(美|US|(?i)States|America|日|JP|(?i)Japan))^((?!(港|台|韩|新)).)*$"}
+  - {name: 🔯 Google-AI故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(美|US|(?i)States|America|日|JP|(?i)Japan))^((?!(港|台|韩|新)).)*$"}
   - {name: 🔯 香港故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美|加|马|英|法|德|土|泰)).)*$"}
   - {name: 🔯 日本故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美|加|马|英|法|德|土|泰)).)*$" }
   - {name: 🔯 狮城故转, type: fallback, hidden: true, include-all: true, tolerance: 20, interval: 300, url: "https://www.gstatic.com/generate_204", filter: "(?i)新加坡|坡|狮城|SG|Singapore" }
