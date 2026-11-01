@@ -5,7 +5,7 @@
 | 规则文件 | 分组 | 默认出口 |
 | --- | --- | --- |
 | `immortal-proxy.list` | `📰 Immortal` | 香港自动 |
-| `immortal-japan.list` | `📰 Immortal-日本优先` | 日本自动 |
+| `immortal-japan.list` | `📰 Immortal-日本优先` | 日本节点 |
 
 `hxmmdd.com` 和色花堂相关资源放在普通项目规则；avbase、x1080x、JAVDB 接口、图片 CDN 和图书馆放在日本优先规则。已有“屏蔽日本”策略独立保留。
 
